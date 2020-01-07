@@ -141,7 +141,7 @@ ynh_psql_create_db "$db_name" "$db_user" "$db_pwd"
 
 ynh_script_progression --message="Post-install of OpenProject" --weight=1
 
-openproject configure >> "$YNH_STDINFO"
+ynh_exec_quiet "openproject configure >> $YNH_STDINFO"
 
 ####=================================================
 #### SETUP APPLICATION WITH CURL
